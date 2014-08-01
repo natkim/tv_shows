@@ -1,0 +1,21 @@
+<h1>Show #<%= @show.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @show.name %></p>
+</div>
+
+<ul>
+  <% @plaid.each do |plaid| %>
+    <li>
+      <%= Network.find_by(id: plaid.network_id).name %>
+      <%= Network.find_by(id: plaid.network_id).url %>
+    </li>
+  <% end %>
+  
+</ul>
+
+  
+<a href="/shows/<%= @show.id %>/edit">Edit</a> |
+<a href="/shows/<%= @show.id %>/destroy">Destroy</a> |
+<a href="/shows">Index</a>

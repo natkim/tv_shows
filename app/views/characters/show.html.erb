@@ -1,0 +1,13 @@
+<h1>Character #<%= @character.id %></h1>
+
+<div>
+  <strong>Show</strong>:<br />
+  <p><%= @character.show_id %></p>
+</div>
+<div>
+  <strong>Actor</strong>:<br />
+  <p><%= @character.actor_id %></p>
+</div>
+
+<a href="/characters/<%= @character.id %>/edit">Edit</a> |
+<a href="/characters/<%= @character.id %>/destroy">Destroy</a>

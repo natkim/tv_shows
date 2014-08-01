@@ -1,0 +1,13 @@
+<h1>Plaid #<%= @plaid.id %></h1>
+
+<div>
+  <strong>Network</strong>:<br />
+  <p><%= @plaid.network_id %></p>
+</div>
+<div>
+  <strong>Show</strong>:<br />
+  <p><%= @plaid.show_id %></p>
+</div>
+
+<a href="/plaids/<%= @plaid.id %>/edit">Edit</a> |
+<a href="/plaids/<%= @plaid.id %>/destroy">Destroy</a>

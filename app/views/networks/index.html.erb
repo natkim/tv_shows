@@ -1,0 +1,30 @@
+<h1>Networks</h1>
+
+<p><a href="/new_network">Add a New Network</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @networks.each do |network| %>
+    <tr>
+          
+          <td><%= network.name %></td>
+          <td><%= network.url %></td>
+          <td><a href="/networks/<%= network.id %>">Show</a>
+        </td>
+      <td><a href="/networks/<%= network.id %>/edit">Edit</a></td>
+      <td><a href="/networks/<%= network.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

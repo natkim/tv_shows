@@ -1,0 +1,18 @@
+<h1>Actor #<%= @actor.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @actor.name %></p>
+</div>
+
+<ul>
+  <% @character.each do |character| %>
+    <li>
+      <%= Character.find_by(id: character.show_id).names%>
+    </li>
+  <% end %>
+</ul>
+
+
+<a href="/actors/<%= @actor.id %>/edit">Edit</a> |
+<a href="/actors/<%= @actor.id %>/destroy">Destroy</a>

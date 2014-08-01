@@ -1,0 +1,29 @@
+<h1>Plaids</h1>
+
+<p><a href="/new_plaid">Add a New Plaid</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Network</th>
+      <th>Show</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @plaids.each do |plaid| %>
+    <tr>
+          <td><%= plaid.network_id %></td>
+          <td><%= plaid.show_id %></td>
+          <td><a href="/plaids/<%= plaid.id %>">Show</a>
+        </td>
+      <td><a href="/plaids/<%= plaid.id %>/edit">Edit</a></td>
+      <td><a href="/plaids/<%= plaid.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
