@@ -14,7 +14,7 @@
   
   <% @plaid.each do |plaid| %>
     <li>
-      <%= Show.find_by(id: plaid.show_id).name%>
+      <%= Show.find_by(id: plaid.show_id)%>
     </li>
   <% end %>
 </ul>
